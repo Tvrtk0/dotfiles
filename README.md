@@ -6,6 +6,7 @@ This repository contains my personal configuration files (dotfiles) for various 
 - **Zsh** - `.zshrc`
 - **Tmux** - `.tmux.conf`
 - **Alacritty** - `alacritty.toml`
+- **Aerospace** - `.aerospace.toml`
 
 ## Installation
 
