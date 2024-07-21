@@ -4,9 +4,9 @@ This repository contains my personal configuration files (dotfiles) for various 
 
 ## Contents
 - **Zsh** - `.zshrc`
-- **Tmux** - `.tmux.conf`
-- **Alacritty** - `alacritty.toml`
-- **Aerospace** - `.aerospace.toml`
+- **[Tmux](https://github.com/tmux/tmux)** - `.tmux.conf`
+- **[Alacritty](https://github.com/alacritty/alacritty)** - `alacritty.toml`
+- **[AeroSpace](https://github.com/nikitabobko/AeroSpace)** - `.aerospace.toml`
 
 ## Installation
 
@@ -31,7 +31,7 @@ brew install stow
 
 ### Using GNU Stow
 
-GNU Stow is a symlink farm manager that simplifies the process of managing dotfiles. Follow these steps to set up the dotfiles using GNU Stow:
+GNU Stow is a symlink farm manager that simplifies the process of managing dotfiles. Follow these steps to set up the dotfiles on your machine:
 
 - Clone the repository:
 ``` zsh
