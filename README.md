@@ -42,9 +42,9 @@ cd $HOME/dotfiles-tvrtk0
 stow */
 ```
 
-- Run this command if you want to symlink only a specific module:
+- Run this command if you want to symlink only a specific module (*e.g. `zsh` module*):
 ``` zsh
-stow `module_name`
+stow zsh
 ```
 
 Each stow command will create symlinks for the corresponding application configuration files in your home directory.
