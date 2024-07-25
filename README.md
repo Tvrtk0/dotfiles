@@ -8,6 +8,7 @@ This repository contains my personal configuration files (dotfiles) for various 
 - **[Tmux](https://github.com/tmux/tmux)** - `.tmux.conf`
 - **[Alacritty](https://github.com/alacritty/alacritty)** - `alacritty.toml`
 - **[AeroSpace](https://github.com/nikitabobko/AeroSpace)** - `.aerospace.toml`
+- [Borders](https://github.com/FelixKratz/JankyBorders) - `bordersrc`
 
 ## Installation
 
