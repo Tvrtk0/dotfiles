@@ -7,6 +7,11 @@ parse_git_branch() {
    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
 }
 
+# cd into git worktree
+wt() {
+    cd "$(git worktree list | fzf | awk '{print $1}')"
+}
+
 
 # Prompt
 COLOR_DEF='%F{#eceff4}'
@@ -60,10 +65,9 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 # fzf
 eval "$(fzf --zsh)"
 
-## fzf fleoxi color theme
-export FZF_DEFAULT_OPTS="
-    --color=fg:#878580,bg:#100F0F,hl:#FFFCF0
-    --color=fg+:#878580,bg+:#1C1B1A,hl+:#FFFCF0
-    --color=border:#AF3029,header:#FFFCF0,gutter:#100F0F
-    --color=spinner:#24837B,info:#24837B,separator:#1C1B1A
-    --color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301"
+## fzf nord color theme
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#e5e9f0,bg:-1,hl:#81a1c1
+    --color=fg+:#81a1c1,bg+:-1,hl+:#81a1c1,gutter:-1
+    --color=info:#b48dac,prompt:#b48dac,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
