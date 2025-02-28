@@ -1,0 +1,21 @@
+window-height = 50
+window-width = 160
+window-padding-y = 10
+window-padding-x = 10
+window-padding-balance = true
+window-step-resize = true
+
+macos-window-shadow = false
+macos-titlebar-style = transparent
+macos-non-native-fullscreen = visible-menu
+macos-titlebar-proxy-icon = hidden
+
+background-opacity = 0.85
+background-blur-radius = 20
+
+theme = catppuccin-mocha
+
+font-feature = -calt
+font-size = 13
+
+keybind = ctrl+a=toggle_fullscreen
