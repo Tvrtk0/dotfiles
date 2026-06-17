@@ -1,21 +1,46 @@
+# --- window ---
 window-height = 50
 window-width = 160
 window-padding-y = 10
 window-padding-x = 10
 window-padding-balance = true
 window-step-resize = true
+window-colorspace = display-p3
 
+# --- macOS chrome ---
 macos-window-shadow = false
 macos-titlebar-style = transparent
 macos-non-native-fullscreen = visible-menu
 macos-titlebar-proxy-icon = hidden
 
-background-opacity = 0.85
-background-blur-radius = 20
+# --- transparency / blur (wallpaper shows through) ---
+background-opacity = 0.7
+background-blur = 20
+unfocused-split-opacity = 0.7
+background = #1a1420
 
-theme = catppuccin-mocha
+# --- legibility over busy wallpaper ---
+minimum-contrast = 1.1
+alpha-blending = linear-corrected
+font-thicken = false
 
+# --- selection / splits ---
+selection-background = #5e4a6b
+selection-foreground = #f5e6f0
+unfocused-split-fill = #1a1420
+
+# --- palette ---
+theme = Rose Pine Moon
+
+# --- cursor ---
+cursor-color = #e8a5c8
+cursor-text = #000000
+cursor-opacity = 0.9
+cursor-style-blink = true
+
+# --- font ---
 font-feature = -calt
 font-size = 13
 
-keybind = ctrl+a=toggle_fullscreen
+# --- QoL ---
+mouse-hide-while-typing = true
