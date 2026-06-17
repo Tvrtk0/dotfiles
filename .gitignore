@@ -3,3 +3,6 @@
 
 # nvim — generated plugin data
 nvim/.config/nvim/typrstats
+
+# secrets (sourced from .zshrc, never tracked)
+.secrets.zsh

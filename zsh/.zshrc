@@ -171,3 +171,6 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Created by `pipx` on 2024-08-25
 export PATH="$PATH:/Users/tvrtko/.local/bin"
+
+# Secrets (API tokens) — kept in ~/.secrets.zsh, gitignored
+[ -f ~/.secrets.zsh ] && source ~/.secrets.zsh
