@@ -99,7 +99,6 @@ alias zshrc="nvim ~/.zshrc"
 
 alias gits="git status"
 alias gitlog="git log --graph --oneline --pretty='%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset'"
-alias ghpr="gh pr list --search 'author:@me' --json number,title --jq '.[] | [.number, .title] | @tsv' | fzf --bind 'enter:execute(gh pr view {1} --web)'"
 alias ghpr="( (echo -e 'Number\tTitle\tBranch\tCreated At\tState\tMergeable'; \
    gh pr list --search 'author:@me' --json number,title,headRefName,createdAt,state,mergeable \
    --jq '.[] | [.number, .title, .headRefName, .createdAt, .state, .mergeable] | @tsv') | column -t -s $'\t' \
@@ -170,7 +169,7 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 
 # Created by `pipx` on 2024-08-25
-export PATH="$PATH:/Users/tvrtko/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Secrets (API tokens) — kept in ~/.secrets.zsh, gitignored
 [ -f ~/.secrets.zsh ] && source ~/.secrets.zsh
