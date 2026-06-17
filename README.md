@@ -10,10 +10,24 @@ This repository contains my personal configuration files (dotfiles) for various 
 - **[Ghostty](https://github.com/ghostty-org/ghostty)** - `config`
 - **[AeroSpace](https://github.com/nikitabobko/AeroSpace)** - `.aerospace.toml`
 - [Borders](https://github.com/FelixKratz/JankyBorders) - `bordersrc`
+- **[bat](https://github.com/sharkdp/bat)** - `config`
 
 ## Installation
 
 The installation steps provided here assume you are using macOS and the Homebrew package manager.
+
+### Quick start (automated)
+
+```zsh
+git clone https://github.com/Tvrtk0/dotfiles.git $HOME/dotfiles-tvrtk0
+cd $HOME/dotfiles-tvrtk0
+./install.sh
+```
+
+`install.sh` is idempotent and will: install Homebrew (if missing), install everything in the
+[`Brewfile`](./Brewfile), git-clone the zsh plugins and tmux's `tpm`, create `~/.secrets.zsh`
+from the template, and symlink all packages with `stow`. The manual steps below do the same
+thing by hand.
 
 ### Prerequisites
 
@@ -59,3 +73,16 @@ stow zsh
 ```
 
 Each stow command will create symlinks for the corresponding application configuration files in your home directory.
+
+## Secrets
+
+API tokens and other secrets are **not** committed. `.zshrc` sources them from `~/.secrets.zsh`,
+which is gitignored. Create it from the tracked template and fill in real values:
+
+```zsh
+cp zsh/.secrets.zsh.example ~/.secrets.zsh
+chmod 600 ~/.secrets.zsh
+$EDITOR ~/.secrets.zsh
+```
+
+(`install.sh` does the copy for you on first run.)
