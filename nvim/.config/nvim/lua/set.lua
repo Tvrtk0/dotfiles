@@ -9,3 +9,6 @@ vim.wo.relativenumber = true
 vim.opt.scrolloff = 15
 
 vim.opt.conceallevel = 2
+
+vim.opt.splitbelow = true
+vim.opt.splitright = true

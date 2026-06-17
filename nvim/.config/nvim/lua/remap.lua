@@ -8,12 +8,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected line up" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Leave cursor at the start of the line after `J`" })
 
 -- keep screen centered after page up/down
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc='Keep screen centered after page up'})
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc='Keep screen centered after page down'})
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep screen centered after page up" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep screen centered after page down" })
 
 -- keep screen centered after search term
-vim.keymap.set("n", "n", "nzzzv", {desc='Keep screen centered after search term'})
-vim.keymap.set("n", "N", "Nzzzv", {desc='Keep screen centered after search term'})
+vim.keymap.set("n", "n", "nzzzv", { desc = "Keep screen centered after search term" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep screen centered after search term" })
 
 -- paste over without copying selected text
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste over without copying selected text" })
@@ -33,8 +33,8 @@ vim.keymap.set(
 )
 
 -- buffers
-vim.api.nvim_set_keymap("n", "tk", ":blast<enter>", { noremap = false })
-vim.api.nvim_set_keymap("n", "tj", ":bfirst<enter>", { noremap = false })
-vim.api.nvim_set_keymap("n", "th", ":bprev<enter>", { noremap = false })
-vim.api.nvim_set_keymap("n", "tl", ":bnext<enter>", { noremap = false })
-vim.api.nvim_set_keymap("n", "td", ":bdelete<enter>", { noremap = false })
+vim.api.nvim_set_keymap("n", "tn", ":blast<enter>", { noremap = false })
+vim.api.nvim_set_keymap("n", "tp", ":bfirst<enter>", { noremap = false })
+vim.api.nvim_set_keymap("n", "tk", ":bprev<enter>", { noremap = false })
+vim.api.nvim_set_keymap("n", "tj", ":bnext<enter>", { noremap = false })
+vim.api.nvim_set_keymap("n", "tx", ":bdelete<enter>", { noremap = false })
