@@ -23,6 +23,9 @@ map("n", "tj", "<cmd>bnext<CR>", { desc = "Next buffer" })
 map("n", "tk", "<cmd>bprev<CR>", { desc = "Previous buffer" })
 map("n", "tx", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
 
+-- file explorer (netrw): open at current file's dir; press - again to go up
+map("n", "-", "<cmd>Explore<CR>", { desc = "File explorer (netrw)" })
+
 -- diagnostics
 map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
