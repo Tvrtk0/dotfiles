@@ -8,7 +8,6 @@ This repository contains my personal configuration files (dotfiles) for various 
 - **[Nvim](https://github.com/neovim/neovim)** - neovim configured with [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager
 - **[Tmux](https://github.com/tmux/tmux)** - `.tmux.conf`
 - **[Ghostty](https://github.com/ghostty-org/ghostty)** - `config`
-- **[Alacritty](https://github.com/alacritty/alacritty)** - `alacritty.toml`
 - **[AeroSpace](https://github.com/nikitabobko/AeroSpace)** - `.aerospace.toml`
 - [Borders](https://github.com/FelixKratz/JankyBorders) - `bordersrc`
 
