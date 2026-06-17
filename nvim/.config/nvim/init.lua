@@ -1,19 +1,13 @@
-require("set")
-require("remap")
-require("lazy_init")
+-- From-scratch config for Neovim 0.11+, native-first (no plugin manager yet).
+-- Old setup is preserved and runnable:  NVIM_APPNAME=nvim-old nvim   (alias: vimold)
+--
+-- Add plugins later only when native isn't enough. To bootstrap lazy.nvim,
+-- create lua/plugins.lua and require it at the bottom of this file.
 
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-local yank_group = augroup("HighlightYank", {})
-
-autocmd("TextYankPost", {
-	group = yank_group,
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({
-			higroup = "IncSearch",
-			timeout = 150,
-		})
-	end,
-})
+require("options")
+require("keymaps")
+require("autocmds")
+require("lsp")

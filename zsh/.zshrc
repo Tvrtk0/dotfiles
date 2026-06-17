@@ -95,6 +95,7 @@ alias ss="cd ~/dev/sofascore/frontend"
 alias config="cd ~/dotfiles"
 alias notes="cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents"
 alias vim="nvim"
+alias vimold="NVIM_APPNAME=nvim-old nvim" # old nvim config, kept as backup
 alias zshrc="nvim ~/.zshrc"
 
 alias gits="git status"
