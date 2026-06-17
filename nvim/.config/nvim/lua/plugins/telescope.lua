@@ -37,12 +37,20 @@ return {
 			require("telescope").load_extension("fzf")
 
 			require("telescope").setup({
-				defaults = { file_ignore_patterns = { "node_modules" } },
+				defaults = { file_ignore_patterns = { "node_modules" }, path_display = { "truncate" } },
 				builtin = { buffers = { sort_lastused = true } },
+				pickers = {
+					find_files = {
+						hidden = true,
+						layout_config = { prompt_position = "top" },
+						sorting_strategy = "ascending",
+					},
+				},
 			})
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Search only Git tracked files" })
+			vim.keymap.set("n", "<leader>ss", builtin.git_status, { desc = "[S]earch Git [S]tatus" })
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
