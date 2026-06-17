@@ -18,7 +18,6 @@ return {
             {
                 name = "Obsidian",
                 path = "~/Google Drive/My Drive/Obsidian",
-                -- ~/Library/CloudStorage/GoogleDrive-/My Drive/Obsidian
             },
         },
     },
