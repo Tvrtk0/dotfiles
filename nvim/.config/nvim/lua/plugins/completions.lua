@@ -44,7 +44,7 @@ return {
                     end,
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-e>"] = cmp.mapping.abort(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                    ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
@@ -52,6 +52,21 @@ return {
                 }, {
                     { name = "buffer" },
                 }),
+                formatting = {
+                    format = function(entry, vim_item)
+                        if entry.completion_item.detail ~= nil and entry.completion_item.detail ~= "" then
+                            vim_item.menu = entry.completion_item.detail
+                        else
+                            vim_item.menu = ({
+                                nvim_lsp = "[LSP]",
+                                luasnip = "[Snippet]",
+                                buffer = "[Buffer]",
+                                path = " [Path]",
+                            })[entry.source.name]
+                        end
+                        return vim_item
+                    end,
+                },
             })
         end,
     },
