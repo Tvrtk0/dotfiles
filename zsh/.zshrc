@@ -77,14 +77,15 @@ alias tmxs="new-tmux-session"
 alias tmxd="delete-tmux-session"
 
 # Prompt
-COLOR_DEF='%F{#eceff4}'
-COLOR_USR='%F{#4c566a}'
-COLOR_DIR='%F{#81a1c1}'
-COLOR_GIT='%F{#b48ead}'
+COLOR_DEF='%F{#e0def4}'     # text — soft lavender-white
+COLOR_USR='%F{#908caa}'     # @host — muted
+COLOR_DIR='%F{#c4a7e7}'     # path — iris/lavender
+COLOR_GIT='%F{#ea9a97}'     # git branch — rose
+COLOR_PROMPT='%F{#ea9a97}'  # $ — rose (matches git branch)
 NEWLINE=$'\n'
 
 setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}@%n ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DIR}${NEWLINE}$ ${COLOR_DEF}'
+export PROMPT='${COLOR_USR}@%n ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DIR}${NEWLINE}${COLOR_PROMPT}$ ${COLOR_DEF}'
 
 
 # Aliases
