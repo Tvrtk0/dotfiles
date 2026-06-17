@@ -44,5 +44,4 @@ o.pumheight = 10
 
 -- netrw (built-in file explorer)
 vim.g.netrw_banner = 0 -- hide the top banner (<F1> still shows help)
-vim.g.netrw_liststyle = 3 -- tree view
 vim.g.netrw_winsize = 25 -- Lexplore sidebar = 25% width
