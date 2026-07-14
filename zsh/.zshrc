@@ -87,6 +87,17 @@ NEWLINE=$'\n'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_USR}@%n ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DIR}${NEWLINE}${COLOR_PROMPT}$ ${COLOR_DEF}'
 
+# Auto-label the terminal tab with the current worktree/feature name
+autoload -Uz add-zsh-hook
+_wt_tab_title() {
+  local name
+  name=$(git rev-parse --show-toplevel 2>/dev/null); name=${name:t}
+  [[ -z $name ]] && name=${PWD:t}
+  print -Pn "\e]0;${name}\a"
+}
+add-zsh-hook precmd _wt_tab_title
+add-zsh-hook chpwd  _wt_tab_title
+
 
 # Aliases
 alias dev="cd ~/dev"
@@ -112,6 +123,7 @@ alias ghrw="( (echo -e 'Number\tAuthor\tTitle\tBranch\tCreated At\tState'; \
 
 ## prepare new sofascore worktree
 alias ssprepare='yarn && yarn run prepare && yarn packages:build'
+alias wts='/Users/tvrtko/dev/sofa/wt-status.sh'
 
 
 # Tab Autocomplete
