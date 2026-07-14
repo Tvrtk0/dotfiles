@@ -44,3 +44,17 @@ font-size = 13
 
 # --- QoL ---
 mouse-hide-while-typing = true
+
+# --- pane (split) focus — vim-style ⌘ h/j/k/l ---
+keybind = super+h=goto_split:left
+keybind = super+j=goto_split:down
+keybind = super+k=goto_split:up
+keybind = super+l=goto_split:right
+# clear_screen lived on ⌘K (now split-focus left→up) → relocated to ⌘⇧K
+keybind = super+shift+k=clear_screen
+
+# --- pane (split) resize — vim-style ⌘ ⌃ h/j/k/l (by 10) ---
+keybind = super+ctrl+h=resize_split:left,10
+keybind = super+ctrl+j=resize_split:down,10
+keybind = super+ctrl+k=resize_split:up,10
+keybind = super+ctrl+l=resize_split:right,10
